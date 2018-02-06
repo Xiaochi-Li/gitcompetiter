@@ -41,15 +41,20 @@ function RepoGrid(props) {
               <img className="avatar" src={repo.owner.avatar_url} />
             </li>
             <li>
-              <a href={repo.html_url} />
-              {repo.name}
+              <a href={repo.html_url}>{repo.name}</a>
             </li>
+            <li>@{repo.owner.login}</li>
+            <li>{repo.stargazers_count} stars</li>
           </ul>
         </li>
       ))}
     </ul>
   );
 }
+
+RepoGrid.propTypes = {
+  repos: PropTypes.array.isRequired
+};
 
 class Polular extends React.Component {
   constructor(props) {
