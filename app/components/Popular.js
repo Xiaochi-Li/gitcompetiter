@@ -11,7 +11,7 @@ function SelectedLanguate(props) {
         return (
           <li
             style={
-              lang === props.selectedLanguate ? { color: "#d0021b" } : null
+              lang === props.selectedLanguate ? {color: "#d0021b"} : null
             }
             key={index}
             onClick={() => props.onSelect(lang)}
@@ -38,7 +38,7 @@ function RepoGrid(props) {
           <div className="popular-rank">#{index + 1}</div>
           <ul className="space-list-items">
             <li>
-              <img className="avatar" src={repo.owner.avatar_url} />
+              <img className="avatar" src={repo.owner.avatar_url}/>
             </li>
             <li>
               <a href={repo.html_url}>{repo.name}</a>
@@ -71,7 +71,7 @@ class Polular extends React.Component {
       selectedLanguate: lang,
       repos: null
     });
-    api.feachPopularRepos(lang).then(repos => this.setState({ repos: repos }));
+    api.feachPopularRepos(lang).then(repos => this.setState({repos: repos}));
     console.log(this.state.repos);
   }
 
@@ -89,7 +89,7 @@ class Polular extends React.Component {
         {!this.state.repos ? (
           <p>LOADING</p>
         ) : (
-          <RepoGrid repos={this.state.repos} />
+          <RepoGrid repos={this.state.repos}/>
         )}
       </div>
     );

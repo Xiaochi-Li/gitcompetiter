@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import {NavLink} from "react-router-dom";
 
 function Nav() {
   return (
@@ -16,7 +16,7 @@ function Nav() {
       </li>
       <li>
         <NavLink activeClassName="active" to="/popular">
-          Polular
+          Popular
         </NavLink>
       </li>
     </ul>

@@ -1,8 +1,10 @@
 var React = require("react");
 var Popular = require("./Popular");
+import ReactRouter, {BrowserRouter, Route} from "react-router-dom";
+
 import Nav from "./Nav.js";
 import Home from "./Home.js";
-import { ReactRouter, BrowserRouter, Route } from "react-router-dom";
+import Battle from "./Battle.js"
 
 class App extends React.Component {
   render() {
@@ -10,10 +12,10 @@ class App extends React.Component {
     return (
       <BrowserRouter>
         <div className="container">
-          <Nav />
-          <hr />
-          <Route path="/popular" component={Popular} />
-          <Route exact path="/" component={Home} />
+          <Nav/>
+          <Route exact path="/" component={Home}/>
+          <Route path="/popular" component={Popular}/>
+          <Route path="/battle" component={Battle}/>
         </div>
       </BrowserRouter>
     );
